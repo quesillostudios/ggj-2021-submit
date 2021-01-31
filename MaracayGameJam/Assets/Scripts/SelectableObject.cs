@@ -33,7 +33,6 @@ public class SelectableObject : MonoBehaviour
     {
         if(IsAUniqueObject)
         {
-            Debug.Log("Estoy aquí");
             objectRenderer.material = LimboManager.Instance.GetHighLightMaterial();
         }
     }
