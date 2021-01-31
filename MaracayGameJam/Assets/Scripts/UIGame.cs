@@ -51,6 +51,7 @@ public class UIGame : MonoBehaviour
 
     public void ExitButton()
     {
+        LimboManager.Instance.DestroyLimbo();
         SceneManager.LoadScene(0);
     }
     #endregion

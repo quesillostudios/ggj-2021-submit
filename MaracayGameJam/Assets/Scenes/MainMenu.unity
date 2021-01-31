@@ -900,7 +900,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneSong: MainMenu
-  autostartSong: 0
+  stopOtherSceneSong: 
+  autostartSong: 1
 --- !u!1 &1128282189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,11 +1143,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SoundManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5393195778740632841, guid: e35e802d867ad5948b4bebcee3678949,
-        type: 3}
-      propertyPath: sounds.Array.data[0].Volume
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e35e802d867ad5948b4bebcee3678949, type: 3}

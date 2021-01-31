@@ -31,6 +31,8 @@ public class LimboManager : MonoBehaviour
     
 
     #region Class Logic
+    public void DestroyLimbo() => Destroy(this.gameObject);
+
     public Material GetPrimaryMaterial() => primaryMaterial;
     public Material GetHighLightMaterial() => highlightMaterial;
 

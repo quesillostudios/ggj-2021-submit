@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectTag: Selectable
-  maxRayDistance: 150
+  maxRayDistance: 300
 --- !u!114 &585719475986634246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
   movementStatus: 0
   movementText: {fileID: 0}
   maxMovements: 30
-  movementSpeed: 10
+  movementSpeed: 30
 --- !u!135 &585719477262947756
 SphereCollider:
   m_ObjectHideFlags: 0

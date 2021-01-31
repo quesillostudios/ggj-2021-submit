@@ -60,7 +60,7 @@ MonoBehaviour:
       type: 2}
     Volume: 1
     Pitch: 1
-    Loop: 0
+    Loop: 1
     Source: {fileID: 0}
   - TrackName: Credits
     Clip: {fileID: 8300000, guid: e1841c9602f16024a8c69877e4749f2e, type: 3}
@@ -68,7 +68,7 @@ MonoBehaviour:
       type: 2}
     Volume: 1
     Pitch: 1
-    Loop: 0
+    Loop: 1
     Source: {fileID: 0}
   - TrackName: PowerUp
     Clip: {fileID: 8300000, guid: dfc20aca94ba0824cb109ff1f0c3b891, type: 3}

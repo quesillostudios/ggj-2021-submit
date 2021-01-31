@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class SceneConfig : MonoBehaviour
 {
     [SerializeField] private string sceneSong;
+    [SerializeField] private string stopOtherSceneSong;
     [SerializeField] private bool autostartSong;
 
     #region Class Logic
@@ -28,7 +29,8 @@ public class SceneConfig : MonoBehaviour
     {
         if(autostartSong == true)
         {
-            SoundHandler.Instance.Play(sceneSong, 0.1f);
+            SoundHandler.Instance.Stop(stopOtherSceneSong);
+            SoundHandler.Instance.Play(sceneSong);
         }
     }
 
