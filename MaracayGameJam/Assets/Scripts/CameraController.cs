@@ -47,6 +47,11 @@ public class CameraController : MonoBehaviour
             moveableTarget.DoMovement(CameraSelection.LastSelectedWorldPosition);
         }
     }
+
+    private void CheckLimboStatus()
+    {
+        Cursor.lockState = LimboManager.Instance.PausedGame == true ? CursorLockMode.None : CursorLockMode.Locked;
+    }
     #endregion
 
     #region MonoBehaviour API
@@ -67,6 +72,7 @@ public class CameraController : MonoBehaviour
         RotateTarget();
         InputCursorStatus();
         TranslateTarget();
+        CheckLimboStatus();
     }
     #endregion
 }

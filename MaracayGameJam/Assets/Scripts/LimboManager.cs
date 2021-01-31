@@ -9,6 +9,26 @@ public class LimboManager : MonoBehaviour
     [SerializeField] private SelectableObject actualObjectSelected;
     private SelectableObject lastObjectSelected;
 
+    private bool pausedGame;
+    public bool PausedGame
+    {
+        get { return pausedGame; }
+        set 
+        {
+            if(value == true)
+            {
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
+
+            pausedGame = value; 
+        }
+    }
+    
+
     #region Class Logic
     public Material GetPrimaryMaterial() => primaryMaterial;
     public Material GetHighLightMaterial() => highlightMaterial;
@@ -43,6 +63,8 @@ public class LimboManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        pausedGame = false;
     }
     #endregion
 }

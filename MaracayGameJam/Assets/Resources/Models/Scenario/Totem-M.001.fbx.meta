@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ee26c6bf3503fb444a3ceb865bf1416b
+guid: 937ba632d5be1fc4da286230252808c0
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -9,12 +9,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Atlas.001
     second: {fileID: 2100000, guid: 0d58bfd4f64cf7d4cbe40f647ffce887, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Runa-Vela
-    second: {fileID: -4292842528917716715, guid: ee26c6bf3503fb444a3ceb865bf1416b,
-      type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
