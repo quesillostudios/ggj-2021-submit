@@ -7,6 +7,7 @@ public class LimboManager : MonoBehaviour
     [SerializeField] private Material primaryMaterial;
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private SelectableObject actualObjectSelected;
+    private int gameScore = 0;
     private SelectableObject lastObjectSelected;
 
     private bool pausedGame;
@@ -37,6 +38,9 @@ public class LimboManager : MonoBehaviour
     public SelectableObject GetSelectedObject() => actualObjectSelected;
 
     private void SetLastObjectReference(ref SelectableObject selected) => lastObjectSelected = selected;
+
+    public void AddGameScore() => gameScore++;
+    public int GetGameScore() => gameScore;
 
     public void PerformWorldTranslate()
     {
