@@ -41,9 +41,9 @@ public class CameraController : MonoBehaviour
 
     private void TranslateTarget()
     {
-        if(Input.GetKey(keyCodeTransport))
+        if(Input.GetKey(keyCodeTransport) && CameraSelection.GetSelected() != null && LimboManager.Instance.GetSelectedObject().ActualSelection != true)
         {
-            //targetToHandle.position = CameraSelection.LastSelectedWorldPosition;
+            LimboManager.Instance.PerformWorldTranslate();
             moveableTarget.DoMovement(CameraSelection.LastSelectedWorldPosition);
         }
     }

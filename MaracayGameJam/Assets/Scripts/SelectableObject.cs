@@ -2,31 +2,40 @@
 
 public class SelectableObject : MonoBehaviour
 {
+    public bool IsAUniqueObject = false;
 
-    private bool isSelected;
-    public bool IsSelected
+    private Renderer objectRenderer;
+
+    private bool actualSelection;
+    public bool ActualSelection
     {
-        get { return isSelected; }
-        set { isSelected = value; }
-    }    
+        get { return actualSelection; }
+        set 
+        {
+            if(IsAUniqueObject)
+            {
+                actualSelection = true;
+                return;
+            }
+
+            actualSelection = value; 
+        }
+    }
 
     #region Class Logic
+    public void ChangeMaterial(Material material) => objectRenderer.material = material;
     #endregion
 
     #region MonoBehaviour API
-    private void Awake()
-    {
-        
-    }
+    private void Awake() => objectRenderer = GetComponent<Renderer>();
 
-    private void Start()
+    private void OnCollisionEnter(Collision other) 
     {
-        
-    }
-
-    private void Update()
-    {
-        
+        if(IsAUniqueObject)
+        {
+            Debug.Log("Estoy aquí");
+            objectRenderer.material = LimboManager.Instance.GetHighLightMaterial();
+        }
     }
     #endregion
 }

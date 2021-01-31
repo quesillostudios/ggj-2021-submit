@@ -36,12 +36,13 @@ public class WispMovement : AMoveable
 
     public override void DoMovement(Vector3 targetPosition)
     {
-        if(movementStatus ==  MovementStatus.Idle)
+        if(movementStatus ==  MovementStatus.Idle && movementsLeft > 0)
         {
+            MovementsLeft--;
+            Debug.Log(movementsLeft);
             lastMovementToTranslate = (targetPosition - transform.position).normalized * movementSpeed * Time.deltaTime;
             movementStatus = MovementStatus.Walking;
         }
-        
     }
 
     public void Move()
